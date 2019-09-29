@@ -18,7 +18,8 @@ class ApplicationController < Sinatra::Base
 
   post "/signup" do
     p params
-    if params["password"] != "" && params["username"] != "" && User.create(username: params["username"], password_digest: params["password"]) 
+    if params["password"] != "" && params["username"] != "" && @user =User.create(username: params["username"], password_digest: params["password"]) 
+      session[:user_id] = 
       redirect '/account'
     else
       erb :failure
