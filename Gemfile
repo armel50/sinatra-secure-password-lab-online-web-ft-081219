@@ -9,7 +9,7 @@ gem 'bcrypt'
 gem 'require_all'
 gem 'capybara'
 gem 'rack_session_access'
-gem 'rack-test'
+gem 'rack-test', '>= 2.0.0'
 gem 'shotgun'
 gem 'pry'
 
